@@ -20,12 +20,14 @@ If you're unable to use the automated process, here are the manual steps:
 
 2. **Navigate to the CrowdStrike Driver Directory**:
    - Open File Explorer and go to:
+
      ```
      C:\Windows\System32\drivers\CrowdStrike
      ```
      
 3. **Delete the Affected Driver File**:
    - Locate and delete the file matching:
+
      ```
      C-00000291*.sys
      ```
@@ -34,9 +36,16 @@ If you're unable to use the automated process, here are the manual steps:
 
 ### Automated Bootable USB Key Instructions
 
+#### From Microsoft :
+  this is the procedure to create your own bootable USB key and apply the workaround, from Microsoft website:
+  https://techcommunity.microsoft.com/t5/intune-customer-success/new-recovery-tool-to-help-with-crowdstrike-issue-impacting/ba-p/4196959
+
+### Develop your Own Bootable USB Key
+
 This repository is focused on developing a bootable USB key that utilizes a minimal Linux environment to automate the removal of the affected driver files. Follow these steps to create the bootable USB key:
 
-1. **Creating the Bootable USB Key**:
+1. **Creating the Bootable USB Key**: 
+   This script can be loaded onto a linux based system
    - Use a suitable tool like Rufus or dd (on Linux) to create a bootable USB with a minimalist Linux distribution that supports UEFI and legacy booting (e.g., Alpine Linux or a custom lightweight Ubuntu image).
 
 2. **Script Functionality**:
